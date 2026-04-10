@@ -1,0 +1,6 @@
+# data files #
+##############
+*.fq.gz
+*.fastq
+*.fasta
+*.fa
