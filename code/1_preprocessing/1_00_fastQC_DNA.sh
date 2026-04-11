@@ -5,20 +5,18 @@
 #SBATCH -t 00:20:00
 #SBATCH -J 1_00_fastQC_DNA
 #SBATCH --mail-type=ALL
-#SBATCH --mail-user=aljo6352@student.uu.se
 
 #load modules
 
-module load FastQC
+module load Java/17.0.15
+module load FastQC/0.12.1
 
 #define variables/paths
 
-BASEPATH="{$HOME}/genome_analysis/project_GA/"
-INPUT_R1="{$BASEPATH}/data/raw_data/chr3_illumina_R1.fq.gz"
-INPUT_R2="{$BASEPATH}/data/raw_data/chr3_illumina_R2.fq.gz"
+INPUT_R1="/home/aljo6352/genome_analysis/project_GA/data/raw_data/chr3_illumina_R1.fq.gz"
+INPUT_R2="/home/aljo6352/genome_analysis/project_GA/data/raw_data/chr3_illumina_R2.fq.gz"
 
-OUTPATH="{$BASEPATH}/analyses_outpuits/1_preprocessing/1_00_fastQC_DNA/"
+OUTPATH="/home/aljo6352/genome_analysis/project_GA/analyses_outpuits/1_preprocessing/1_00_fastQC_DNA/"
 
-#run 
-fastqc INPUT_R1 -o OUTPATH
-fastqc INPUT_R2 -o OUTPATH
+#run
+fastqc $INPUT_R1 $INPUT_R2 -o $OUTPATH
