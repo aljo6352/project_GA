@@ -4,3 +4,6 @@
 *.fastq
 *.fasta
 *.fa
+*log.txt
+*.BAM
+*.SAM

@@ -16,7 +16,7 @@ module load Trimmomatic
 
 TRIMMOMATIC="/sw/arch/eb/software/Trimmomatic/0.39-Java-17/trimmomatic-0.39.jar"  
 BASEPATH="{$HOME}/genome_analysis/project_GA/"
-LOG="{$BASEPATH}/analyses_outputs/01_preprocessing/01_1_logfile"
+LOG="{$BASEPATH}/analyses_outputs/01_preprocessing/01_1_log.txt"
 INPUT_R1="{$BASEPATH}/data/raw_data/chr3_illumina_R1.fq.gz"
 INPUT_R2="{$BASEPATH}/data/raw_data/chr3_illumina_R2.fq.gz"
 
