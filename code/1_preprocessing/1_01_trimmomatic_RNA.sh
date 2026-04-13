@@ -24,5 +24,7 @@ do
 	for i in 1 2 3
 	do
 	java -jar $TRIMMOMATIC/trimmomatic-0.39.jar PE $INPUT_PATH/transcriptome_${treatment}_${i}_R1.fq.gz $INPUT_PATH/transcriptome_${treatment}_${i}_R2.fq.gz $OUTPUT_PATH/${treatment}_${i}_R1_paired.fq.gz $OUTPUT_PATH/${treatment}_${i}_R1_unpaired.fq.gz $OUTPUT_PATH/${treatment}_${i}_R2_paired.fq.gz $OUTPUT_PATH/${treatment}_${i}_R2_unpaired.fq.gz ILLUMINACLIP:$TRIMMOMATIC/adapters/TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 >> $LOG
+	wait
 	done
+wait
 done
