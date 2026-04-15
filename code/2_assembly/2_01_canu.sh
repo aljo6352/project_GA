@@ -9,6 +9,10 @@
 #load modules
 module load canu/2.3-GCCcore-13.3.0-Java-17
 
+module load SAMtools/1.22.1-GCC-13.3.0
+
+samtools=/sw/arch/eb/modules/all/SAMtools/1.22.1-GCC-13.3.0.lua
+
 #run
 canu -p 2_01_canu -d /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_01_canu \
 genomeSize=16m gridOptions="-A uppmax2026-1-61 -M pelle -t 12:00:00" \
