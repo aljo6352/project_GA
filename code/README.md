@@ -1,10 +1,10 @@
 Here in the code folder there will be a subfolder for each general step of the workflow. Each subfolder contains the following methods and their code:
 1.  Preprocessing
-	- 1_00 quality check (DNA and RNA) 
-	- 1_01 Trimming
-	- 1_02 Quality check
+	- 1_00 quality check with FastQC
+	- 1_01 Trimming with trimmomati
+	- 1_02 Quality check again with FastQC after trimming
 2. Genome assembly
-	- assembly from long-read data 
+	- 2_01 assembly from long-read data with canu 
 	- Align illumina to assembled contigs
 	- polish with the illumina data 
 	- Mask repeats
