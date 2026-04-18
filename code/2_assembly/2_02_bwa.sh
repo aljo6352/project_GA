@@ -10,9 +10,11 @@ module load BWA/0.7.19-GCCcore-13.3.0
 
 #first we need to create a BWA index
 
-bwa index [-a bwtsw|is] input_reference.fasta index_prefix
-# input-reference is the file by canu with the contigs (i think).
-#-a is defined by the size of this file. if < 2GB use is, if larger use bwtsw.
-bwa mem index_prefix [input_reads.fastq|\
-/home/aljo6352/genome_analysis/project_GA/data/processed_data/1_01_trimmed_DNA/R1_paired.fq.gz /home/aljo6352/genome_analysis/project_GA/data/processed_data/1_01_trimmed_DNA/R2_paired.fq.gz \ 
--t 2 > #output name
+bwa index -p /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_02_bwa/2_02_index -a bwtsw /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_01_canu/2_01_canu.contigs.fasta
+
+#then we can use that to run bwa mem algorithm
+bwa mem -t 2 /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_02_bwa/2_02_index \
+/proj/uppmax2026-1-61/nobackup/work/aljo6352/2_01_canu/2_01_canu.contigs.fasta|\
+/home/aljo6352/genome_analysis/project_GA/data/processed_data/1_01_trimmed_DNA/R1_paired.fq.gz \
+/home/aljo6352/genome_analysis/project_GA/data/processed_data/1_01_trimmed_DNA/R2_paired.fq.gz \
+> /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_02_bwa/2_02_bwa.sam
