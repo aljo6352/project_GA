@@ -8,7 +8,8 @@
 
 module load Pilon/1.24-Java-17
 
-pilon --genome [genome.fasta] --frags [frags.bam] --threads 2 --output [prefix] --outdir [outdirectory]
+pilon --genome /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_01_canu/2_01_canu.contigs.fasta \
+--frags /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_02_bwa/2_02_bwa_sorted.bam \
+--threads 2 --output 2_03_pilon \
+--outdir /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_03_pilon/
 
-# where genome.fasta is the file output by canu. 
-# frags.bam is the sam>bam converted file from BWA. 
