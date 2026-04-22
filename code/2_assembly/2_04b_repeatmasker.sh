@@ -13,5 +13,5 @@ cd /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_04_repeatmasker/
 
 RepeatMasker \
 -nolow -xsmall \
--lib n_japonicum-families.fa \
+-lib -n_japonicum-families.fa \
 /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_03_pilon/2_03_pilon.fasta
