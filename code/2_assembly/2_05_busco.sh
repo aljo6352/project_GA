@@ -17,3 +17,7 @@ busco -i /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_04_repeatmasker/2_04_rm.
 busco -i /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_03_pilon/2_03_pilon.fasta \
 -m genome -c 2 --out 2_05_unmaskedQC \
 -l embryophyta_odb10
+
+busco -i /proj/uppmax2026-1-61/nobackup/work/aljo6352/2_01_canu/2_01_canu.contigs.fasta \
+-m genome -c 2 --out 2_05_unpolishedQC \
+-l embryophyta_odb10
