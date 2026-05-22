@@ -9,11 +9,12 @@ Here in the code folder there will be a subfolder for each general step of the w
 	- polish with the illumina data 
 	- Mask repeats
 	- Quality assessment
-	- annotation
-3. Differential expression analysis
+3. Annotation
+	- Structural annotation
+	- functional annotation
+4. Differential expression analysis
 	- Mapping of RNAseq data
 	- counting features
 	- DE analysis
-4. Extra analysis 
-	- Gene enrichment analysis
+5. Extra analysis 
 	- Plot syntety with _C. purpureus_
